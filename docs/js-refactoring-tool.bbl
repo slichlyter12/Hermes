@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{jsnose}
+A.~M. Fard and A.~Mesbah.
+\newblock Jsnose: Detecting javascript code smells.
+\newblock In {\em 2013 IEEE 13th International Working Conference on Source
+  Code Analysis and Manipulation (SCAM)}, pages 116--125, Sept 2013.
+
+\bibitem{tool}
+A.~Feldthaus, T.~D. Millstein, A.~Moller, M.~Schafer, and F.~Tip.
+\newblock Tool-supported refactoring for javascript.
+\newblock In {\em OOPSLA}, 2011.
+
+\bibitem{type-refinement}
+V.~Kashyap, J.~Sarracino, J.~Wagner, B.~Wiedermann, and B.~Hardekopf.
+\newblock Type refinement for static analysis of javascript.
+\newblock In {\em Proceedings of the 9th Symposium on Dynamic Languages}, DLS
+  '13, pages 17--26, New York, NY, USA, 2013. ACM.
+
+\bibitem{automatic}
+V.~Kashyap, J.~Sarracino, J.~Wagner, B.~Wiedermann, and B.~Hardekopf.
+\newblock Type refinement for static analysis of javascript.
+\newblock In {\em Proceedings of the 9th Symposium on Dynamic Languages}, DLS
+  '13, pages 17--26, New York, NY, USA, 2013. ACM.
+
+\bibitem{es6}
+A.~Paltoglou, V.~E. Zafeiris, E.~A. Giakoumakis, and N.~A. Diamantidis.
+\newblock Automated refactoring of client-side javascript code to es6 modules.
+\newblock In {\em 2018 IEEE 25th International Conference on Software Analysis,
+  Evolution and Reengineering (SANER)}, pages 402--412, March 2018.
+
+\end{thebibliography}

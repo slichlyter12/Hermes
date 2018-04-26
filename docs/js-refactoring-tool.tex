@@ -1,0 +1,275 @@
+% This is "sig-alternate.tex" V2.1 April 2013
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate}
+
+
+\begin{document}
+
+% Copyright
+\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+
+% ISBN
+
+%Conference
+
+
+%
+% --- Author Metadata here ---
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{JavaScript Refactoring Tool to Analyze the Usage of 'let' and 'var' Keywords}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+% \numberofauthors{1} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+Sam Lichlyter, Spencer Kresge, Nirvik Das\\
+\affaddr{School of EECS, Oregon State University}\\
+\affaddr{Corvallis, OR, USA}\\
+\email{\{lichlyts,kresges,dasn\}@oregonstate.edu}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+
+\date{25 April 2018}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+% \begin{abstract}
+
+% \end{abstract}
+
+
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+% Please copy and paste the code instead of the example below. 
+%
+
+%
+% End generated code
+%
+
+%
+%  Use this command to print the description
+%
+
+% We no longer use \terms command
+%\terms{Theory}
+
+\keywords{JavaScript, Refactoring, Visual Studio Code}
+
+% \section{Introduction}
+
+\section{Research Questions}
+With the \textit{let} and \textit{const} keywords providing a different set of rules in terms of scope, older JS code can be refactored to replace \textit{var}, in places where \textit{let} and \textit{const} would be more appropriate in context. 
+Without an automated tool, such refactorings can be very expensive and tedious, especially in programs with a large number of SLOC. 
+While some of this refactoring could be done using a find/replace method, blindly applying these changes could produce hazardous and unwanted results.
+
+In this paper, we attempt to deal with this issue by answering the following research questions:
+
+\textit{\textbf{RQ1}} To what extent has \textit{var} been refactored to \textit{let} and \textit{const} in older applications?
+
+\textit{\textbf{RQ2}} What are the challenges that developers face when it comes to implementing such a refactoring procedure manually?
+
+It's important to answer the above questions because the margin of error in such an implementation can be quite large. Human errors and other factors can cause unwanted bugs to be introduced, \textit{var} and \textit{let} act differently on different scopes. 
+Knowing how the scopes affect the source code is quite important to make a successful refactoring implementation.
+
+To answer the above questions, we will develop a tool that can analyze variables and the scope within which each the variable's current value is effective.
+After confirming the scope within which the variables should be active, the tool refactors \textit{var}, if necessary.
+
+\section{Technical Challenges}
+In order to understand the usage of \textit{var}, \textit{let}, and \textit{const}, a thorough understanding of scope and assignment is needed. 
+Traditionally developers used \textit{var} as a catch all for variables of all nature.
+ES6 introduces new and refined constructs for creating variables - \textit{let} and \textit{const}. 
+The keyword \textit{const} is a stronger declaration for variables that never need reassignment. 
+Developers often misuse this new feature by declaring a \textit{var} and then never reassigning it. 
+The keyword \textit{let} is a stronger declaration of scope for variables only used in a particular block. 
+
+The technical challenges associated with understanding the usage of these new constructs requires being able to understand the intent of existing code. 
+By acknowledging this intent we can begin to analyze where variable keywords (\textit{var}, \textit{let}, \textit{const}) are being utilized appropriately or not utilized at all. 
+For instance, scanning a file and realizing a \textit{var} declaration is never reassigned would be a great opportunity to use \textit{const}. 
+Realizing that an old \textit{var} declaration is used only in the scope of a single block means it could be more readable using \textit{let}. 
+These opportunities for refactoring are only discovered by scanning the source code for variable references and understanding the semantics.
+
+In order to create a good refactoring tool, we need to understand how developers currently refactor old code into this new paradigm. 
+This hurdle can be bridged by examining a corpus of GitHub commits surrounding lines of code containing the new ES6 keywords. 
+This will not be an easy task since a diverse collection of repositories will be needed - all of which must demonstrate relevant commits. 
+This same corpus can be used to identify challenges in refactoring by tallying the resultant incorrect uses of the new keywords. 
+Incorrect uses will be defined as uses of the new keywords that invalidate their intended use or otherwise cause program errors. 
+
+Hopefully, our tool will provide a methodology for solving these technical challenges, answering our research questions, and ultimately improving the developer usage of the new ES6 keywords \textit{let} and \textit{const}. 
+
+\section{Proposed Solution}
+Our proposed solution will consist of an extension built for the open-source text editor, Visual Studio Code.
+The tool will be able to be called using VSCode's ``Command Palette'' as well as run in the background as users code so that if they use a \textit{var} keyword when they should be using \textit{let} or \textit{const}, they will be alerted by a tooltip or a specialized styling of the declaration.
+
+The tool will need to analyze what variables are declared where and check to see if any of them were changed after their declaration and in what scope they are changed.
+This cannot be done using a simple text analysis of the code, a more powerful static analysis tool will need to be utilized or developed.
+
+We will first start out by gathering a corpus and answering the aforementioned research questions.
+This will help us to design a better, more usable tool.
+We will then build our tool borrowing some techniques from the authors below.
+
+The tool will analyze the usage of variables defined within the project by their respective scopes and determine whether they should be declared using the \textit{var}, \textit{let}, or \textit{const} keyword.
+
+\section{Related Work}
+In this section we'll look at five previous works whose authors ventured into the refactoring of JavaScript code.
+We'll look at what they did and how it will impact our research.
+
+\subsection{Automated Refactoring of Client-Side\\ JavaScript Code to ES6 Modules}
+This paper looked at taking JavaScript code that was written using previous versions of Javascript, notably ES5 and below and transforming it into ES6 code (the latest version).
+It mainly focuses on refactoring client-side web applications to fix code smells, specifically those related to global variables and global functions that are declared in JS files linked to web pages.
+The authors developed an approach to refactor this code and properly scope variables and functions to try and reach 100\% encapsulation \cite{es6}. 
+
+This paper provided us with a starting point in how we think we might approach the problem.
+The method and tools used to provide their analysis could prove useful to us in the development of our new tool.
+
+\subsection{Type Refinement for Static Analysis \\of JavaScript}
+This paper proposed a new technique for static analysis called \textit{type refinement}.
+Using their new technique they showed they could improve static analysis precision by up to 86\% without degrading performance.
+This was done by developing a new static analysis tool that would report potential type-errors in JavaScript code \cite{type-refinement}.
+
+Similar to the paper before it, we can glean from this paper a set of techniques and tools used for static analysis.
+
+\subsection{JSNose: Detecting JavaScript Code Smells}
+The authors of this paper discuss different code smells that are prevalent in JavaScript code.
+They proposed a set of 13 code smells and developed a detection technique called JSNose.
+They analyzed 11 web applications to see which code smells were most prevalent.
+Their findings indicated that lazy objects, long method/function, closure smells, coupling between JavaScript, HTML, and CSS, and excessive global variables were the most prevalent code smells \cite{jsnose}.
+
+Some of the proposed code smells could be early indicators of where developers may be misusing the \textit{var} keyword, especially the global variable code smell.
+Again, some of the techniques and tools used in the paper might prove useful in the development of our new tool. 
+
+\subsection{Tool-supported Refactoring for JavaScript}
+This is an older paper when tools for JavaScript refactoring were in their infancy.
+This paper took on the task of analyzing the correctness of refactorings using a technique called \textit{pointer analysis}.
+This allowed developers to ensure the correctness of their refactorings by having a set of preconditions in which the code had to fulfill in order to be refactored without losing or changing the semantics of the code \cite{tool}.
+
+While potentially not as influential to us as new tool developers, this paper helped lay the ground-work for modern refactoring and still provides useful information in the area of static analysis.
+
+\subsection{Semi-Automatic Rename Refactoring for JavaScript}
+This paper focused primarily on rename-refactoring.
+The authors used a technique to find related identifier tokens which allowed them to do their static analysis.
+In their tests they saw a reduction in manual effort by 57\% over search-and-replace methods \cite{automatic}.
+
+This paper provided useful techniques in finding related identifier tokens which we might be able to apply in our new tool to find related identifiers for variables instead of function names.
+
+% \section{Conclusion}
+
+%\end{document}  % This is where a 'short' article might terminate
+
+%ACKNOWLEDGMENTS are optional
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{refs}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+% That's all folks!
+\end{document}
