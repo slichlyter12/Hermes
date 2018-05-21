@@ -1,15 +1,51 @@
-# Hermes
-Hermes is a refactoring tool used to analyze the usage of the 'var,' 'let,' and 'const' keywords used in JavaScript programs. 
+# eslint-plugin-var-to-let
 
-## Repository Structure
-- docs:
-	- Documentation for the purpose of the Software Maintenance and Evolution class at Oregon State University. It includes our research paper with our methods and proposed solution. It also includes presentation files for presentations given in class.
-- hermes:
-	- This is the code used for building the Visual Studio Code extension.
-- resources:
-	- These are resources we used for the purpose of doing research for and implementation of our tool.
-	
-## Contributing
-If you would like to contribute to this project please feel free to do so by creating a pull request. If you find an issue with our tool, please also don't hesitate to submit an issue. 
+Convert `var` to `let` where applicable
 
-Thanks! Happy coding!
+## Installation
+
+You'll first need to install [ESLint](http://eslint.org):
+
+```
+$ npm i eslint --save-dev
+```
+
+Next, install `eslint-plugin-var-to-let`:
+
+```
+$ npm install eslint-plugin-var-to-let --save-dev
+```
+
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-var-to-let` globally.
+
+## Usage
+
+Add `var-to-let` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+
+```json
+{
+    "plugins": [
+        "var-to-let"
+    ]
+}
+```
+
+
+Then configure the rules you want to use under the rules section.
+
+```json
+{
+    "rules": {
+        "var-to-let/rule-name": 2
+    }
+}
+```
+
+## Supported Rules
+
+* Fill in provided rules here
+
+
+
+
+
